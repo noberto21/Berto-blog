@@ -1,0 +1,78 @@
+.details-container
+{
+    background-color: gray;
+    border-left: rgb(60, 255, 0) solid 3px;
+    border: solid 1px black;
+}
+.date_added
+{
+    color: white;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.intro
+{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.post-body
+{
+    background-color: antiquewhite;
+    margin-left: 20px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+/* comment section */
+.comment_box
+{
+    background-color: gray;
+    position: relative;
+    border: solid 1px black;
+    border-bottom: 1px solid black;
+    padding-left: 20px;
+    
+}
+.comment-name
+{
+    color: white;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.comment-email 
+{
+    margin-top: -20px
+}
+.comment-date
+{
+    margin-top: -20px;
+}
+.comment-body
+{
+    color: white;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+/* add comments section */
+.add-comments
+{
+    background-color: gray;
+    border: solid 1px black;
+    padding: 10px;
+}
+.comment-btn
+{
+    padding: 5px;
+    margin-top: 10px;
+    width: 80px;
+    border-radius: 6px;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+
+}

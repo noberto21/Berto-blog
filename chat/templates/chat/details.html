@@ -1,0 +1,37 @@
+{% extends 'chat/base.html' %}
+
+{% block content %}
+        <h1 class="detail-title">{{ post.title }}</h1>
+    <div class="details-container">
+        <p class="intro"><strong>{{post.intro}}</strong></p>
+        <p class="post-body">{{post.body}}</p>
+        <p class="date_added">Posted at {{post.date_added}}</p>
+    </div>
+
+    <hr>
+
+    <h2>Comments</h2>
+    <div class="comment_box">
+        {% for comment in post.comments.all %}
+            <p class="comment-name">From:{{comment.name}}</p><br> <p class="comment-date">{{ comment.date_added }}</p><br>
+            <p class="comment-email">{{comment.email}}</p><br> 
+            <p class="comment-body">{{ comment.body}}</p>
+            <hr>
+            {% empty %}
+            <p>No comments</p>
+        {% endfor %}
+    </div>
+    
+    <hr>
+
+    <h2>Add comments</h2>
+    <div class="add-comments">
+        <form method="post" action=".">
+            {% csrf_token %}
+            <label>Name</label>{{form.name}} 
+            <label>Email</label>{{form.email}} 
+            <label>Body</label>{{form.body}}
+            <button class="comment-btn">Submit</button>
+        </form>
+    </div>
+{% endblock %}

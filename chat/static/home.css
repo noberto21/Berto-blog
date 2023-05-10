@@ -1,0 +1,36 @@
+body
+{
+    background-color: rgb(179, 179, 179);
+
+}
+.container
+{
+    background-color: gray;
+    width: 300px;
+    height: auto;
+    
+}
+.blog
+{
+    color: white;
+    font-size: 15px;
+}
+.title2
+{
+    text-align: center;
+    background-color: rgb(0,0,0);
+    color: red;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.comment-box
+{
+    color: antiquewhite;
+    background-color: gray;
+}
+img
+{
+    background-color: gray;
+    margin-top: -12px;
+    width: 200px;
+}

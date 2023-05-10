@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'details.css' %}">
+</head>
+<style>
+    body
+    {
+        font-family: monospace;
+        background-color: rgb(179, 179, 179);;
+    }
+    .home-btn
+    {
+        background-color:  rgb(179, 179, 179);
+        float: right;
+        left: 20px;
+        position: absolute;
+        top: 30px;
+        color: blue;
+    }
+    nav
+    {
+        width: 100%;
+        background-color: gray;
+        height: 70px;
+        border: 1px solid black;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    .nav-item
+    {
+        position: relative;
+        top: 15px;
+        left: 45%;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <div class="title">
+            <a href="" class="nav-item"><img src='{% static "BERTO.png" %}' alt=""></a>
+        </div>
+        <button class="home-btn"> <a href="{% url 'home' %}">Home</a></button>
+    </nav>
+
+    <section class="section">
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </section>
+    
+</body>
+</html>
